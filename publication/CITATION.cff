@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use WeaveCube, the Lee Weave Method, or the reported experimental results, please cite this software and the accompanying technical report."
+title: "WeaveCube: Exact Solution Construction with the Lee Weave Method"
+type: software
+authors:
+  - family-names: "Lee"
+    given-names: "Sihyun"
+version: "1.0"
+date-released: "2026-09-16"
+license: "Apache-2.0"

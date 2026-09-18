@@ -1,0 +1,46 @@
+# Python/runtime caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local research outputs and resident caches
+/reports/
+/pdcc_cache/
+/cache/
+/caches/
+*.npy
+*.npz
+*.pkl
+*.pickle
+
+# Archives / local delivery bundles
+*.zip
+*.7z
+*.rar
+
+# Backup / temporary editor artifacts
+*.bak
+*.tmp
+*.temp
+*~
+*.swp
+*.swo
+
+# OS / IDE metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local publication checkouts / generated render directories
+*_publication_checkout/
+*_render/

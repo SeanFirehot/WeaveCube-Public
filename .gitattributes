@@ -1,0 +1,36 @@
+# WeaveCube repository text/binary normalization
+# Historical CubeLab source paths are preserved intentionally for reproducibility.
+
+* text=auto
+
+# Source and documentation: canonical LF in the repository and working tree.
+*.py   text eol=lf
+*.md   text eol=lf
+*.txt  text eol=lf
+*.json text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.ini  text eol=lf
+*.cfg  text eol=lf
+*.cff  text eol=lf
+*.bib  text eol=lf
+*.sql  text eol=lf
+
+# PowerShell scripts follow Windows-native CRLF locally.
+*.ps1  text eol=crlf
+
+# Binary publication artifacts.
+*.pdf  binary
+*.pptx binary
+*.docx binary
+*.zip  binary
+*.npy  binary
+*.npz  binary
+*.pkl  binary
+*.pickle binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
