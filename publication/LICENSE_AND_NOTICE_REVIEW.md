@@ -1,7 +1,7 @@
 # WeaveCube license and notice review
 
 Date: 2026-09-18
-Status: **PRE-PUBLICATION LICENSE PACKAGING REVIEW PASS — final rebuilt snapshot smoke pending**
+Status: **PUBLIC SNAPSHOT LICENSE PACKAGING REVIEW PASS**
 
 ## Apache-2.0 source
 
@@ -113,20 +113,24 @@ The 160-code-file sanitized snapshot already passed:
 - no `.git` history;
 - manual source scan for direct historical solver runtime imports.
 
-## Final gate
+## Final gate result
 
-The builder now maps three additional root files into the final public
-snapshot:
+The final license-bearing snapshot was rebuilt and re-tested successfully.
 
-- `LICENSE`
-- `NOTICE`
-- `THIRD_PARTY_NOTICES.md`
-
-Expected final snapshot size:
+Observed final builder result:
 
 - code files: **160**
-- total files: **186**
+- builder-copied files: **186**
+- generated build receipt committed separately: **1**
+- public Git blobs at the provenance root: **187**
+- license: **Apache-2.0**
+- notice pack: **PASS**
+- ignore gate: **PASS**
+- import gate: **PASS**
+- forbidden-marker gate: **PASS**
+- publication import smoke: **PASS**
+- focused Phase-2 regression: **10/10 PASS**
 
-The final release gate is one fresh rebuild and repeat smoke of this
-license-bearing snapshot. No public visibility, merge, or release tag is
-authorized by this document.
+The published provenance root is
+`d3e4773430c3f93dfc26d49772fe064bdc6109ae`. No release tag is created or
+implied by this review.

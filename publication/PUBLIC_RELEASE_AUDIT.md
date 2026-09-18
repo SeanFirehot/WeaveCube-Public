@@ -1,25 +1,31 @@
 # WeaveCube Public Release Audit
 
-Date: 2026-09-17
-Branch: `publication-v1`
+Date: 2026-09-19
+Public repository: `SeanFirehot/WeaveCube-Public`
 
 ## Status
 
-**Release preparation: HOLD — repository must remain private until implementation provenance and the Apache-2.0 release scope are resolved.**
+**PUBLIC SNAPSHOT VERIFICATION: PASS.** The sanitized Apache-2.0 snapshot has been published with a fresh public history root.
 
-Completed gates:
+Completed release gates:
 
-1. **PASS** — reachable `main` and `publication-v1` commit metadata was rewritten to remove the personal email identity; the temporary `publication-v1-lineendings` branch was deleted; pre-rewrite bundles were preserved locally.
-2. **PASS** — the required Windows / Python 3.14 compile/import smoke passed after the rewrite.
-3. **SELECTED** — Apache License 2.0 is the intended software license.
+1. **PASS** — historical private Git metadata was scrubbed and the public distribution was separated from the private research history.
+2. **PASS** — Windows / Python 3.14 compile/import smoke.
+3. **PASS** — Apache-2.0 license / NOTICE / third-party prior-art notice packaging.
+4. **PASS** — explicit 160-file code manifest, static project-local import closure, ignore gate, and forbidden historical-integration marker gate.
+5. **PASS** — focused Phase-2 regression: 10/10.
+6. **PASS** — public Git tree: 187 blobs, root commit with zero parents, historical external-solver filenames absent.
+7. **PASS** — remote public HEAD and publication artifact identities verified after push.
 
-The license file is **not yet added**. The release review has reopened a substantive provenance gate after confirming that historical CubeLab development intentionally used Kociemba/RubikTwoPhase-family architecture and included direct external-solver integration in some historical research scripts.
+Public provenance root:
 
-Remaining substantive gate:
+- `d3e4773430c3f93dfc26d49772fe064bdc6109ae`
 
-4. **PENDING** — classify implementation provenance and define the exact code that can be distributed under Apache-2.0.
+Private source anchor recorded by the build receipt:
 
-Do not merge to `main`, change visibility to public, add the final `LICENSE`, or create the public release until this provenance gate passes and the final branch diff is reviewed.
+- `580f7979545e2c3acfbf7f9e1bb06ae646e7d2cd`
+
+This audit is an engineering provenance record, not a legal opinion. No release tag is implied by this status; tagging remains a separate explicit release action.
 
 ## Source synchronization
 
@@ -371,3 +377,32 @@ artifact issue, not a provenance/runtime failure.
 `shutil.rmtree` that clears the read-only attribute and retries deletion.
 If a file is actively locked by another process, the builder fails with an
 explicit instruction to close that process or choose a fresh destination.
+
+
+## 2026-09-19 remote public-repository verification
+
+After publication to `SeanFirehot/WeaveCube-Public`, the remote repository was
+verified directly:
+
+- public HEAD before this documentation finalization commit:
+  `d3e4773430c3f93dfc26d49772fe064bdc6109ae`;
+- root commit parent count: **0**;
+- recursive Git tree truncated: **false**;
+- tracked blobs: **187**;
+- filenames containing `kociemba`, `nissy`, `min2phase`, or `twophase`: **0**;
+- code-search hits for `kociemba_p1_runtime_v36`,
+  `audit_gx31_nissy_index_translation`, `from twophase`, or
+  `import twophase`: **0**;
+- `LICENSE` Git blob:
+  `137069b823873b8bcf42979bcf8e9371052d26a2`;
+- technical report Git blob:
+  `b082875d8918129fc03371ca659a0f707f87792e`;
+- core deck Git blob:
+  `cc69ccb57c936177b33a78c8e08aab6623cd76c5`;
+- build receipt reports `source_head`
+  `580f7979545e2c3acfbf7f9e1bb06ae646e7d2cd`,
+  `code_files=160`, `total_files=186`, and `license=Apache-2.0`.
+
+The five `src/cubelab/constraint_engine/cache/` source files that were omitted
+by the first discarded local staging attempt are present in the published root
+tree. The discarded incomplete root commit was never successfully pushed.

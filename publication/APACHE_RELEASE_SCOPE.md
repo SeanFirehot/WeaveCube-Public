@@ -1,13 +1,13 @@
 # WeaveCube Apache-2.0 release scope
 
-Date: 2026-09-17
-Status: **PROVISIONAL RELEASE-SCOPE DEFINITION — repository remains private**
+Date: 2026-09-19
+Status: **PUBLIC SNAPSHOT SCOPE FROZEN — APACHE-2.0 SNAPSHOT PUBLISHED**
 
 ## Purpose
 
-Apache License 2.0 is the selected intended license for the WeaveCube v1.0 research release. The license has not yet been added because the private research repository contains historical integration files whose provenance and external-solver dependencies must not be blurred into a repository-wide licensing claim.
+Apache License 2.0 is the license for the sanitized WeaveCube v1.0 research snapshot published from a fresh history root. The private research repository remains separate because it contains historical integration material whose provenance and external-solver dependencies must not be blurred into the public snapshot licensing claim.
 
-This document defines the release-scope rule that will govern the final v1.0 snapshot.
+This document records the release-scope rule applied to the published snapshot.
 
 ## Scope principle
 
@@ -73,9 +73,9 @@ The 2026-09-17 forensic scan and focused Phase-2 review currently support these 
 
 These observations are not a legal opinion and do not by themselves clear every project file.
 
-## Gate to add `LICENSE`
+## Gate used to add `LICENSE`
 
-Do not add the Apache-2.0 `LICENSE` to the public snapshot until all of the following are complete:
+The Apache-2.0 `LICENSE` was added only after all of the following were completed:
 
 1. freeze the exact public snapshot manifest;
 2. ensure direct RubikTwoPhase and Nissy teacher/source-semantic integration material is absent from that snapshot;
@@ -106,5 +106,6 @@ min2phase, Nissy Classic, and Nissy Core/h48 source code and generated solver
 assets are **not bundled** in the sanitized snapshot. Those projects retain
 their own GPL-family licenses.
 
-A final license-bearing snapshot rebuild/smoke is required before the release
-status can move from HOLD to final-review-ready.
+The final license-bearing snapshot rebuild/smoke passed before publication.
+The public provenance root is
+`d3e4773430c3f93dfc26d49772fe064bdc6109ae`.

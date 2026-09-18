@@ -24,7 +24,7 @@ WeaveCube does **not** claim to have invented two-phase solving, subgroup/DR red
 
 The central contribution candidate is architectural: **Lee Weave Method = shared-word exact construction + progressive exact restriction + late commitment/materialization**. In the current solver lineage, this project-specific front-end construction replaces the conventional front-end / Phase-1 search while an established Phase-2-style subgroup-completion architecture remains prior art. The exact six-orbit characterization of the project-specific ATO-zero terminal set is a separate project result.
 
-The release review does **not** describe the implementation as clean-room. Source-code provenance, historical GPL-facing integration code, and the exact Apache-2.0 release scope are being audited explicitly before publication.
+The release review does **not** describe the implementation as clean-room. Source-code provenance, historical GPL-facing integration code, and the Apache-2.0 release boundary are documented explicitly in the public provenance records.
 
 ## Publication files
 
@@ -52,14 +52,16 @@ Generated resident caches and large experiment-output directories are not redist
 
 ## Release status
 
-The private research repository is still in **pre-publication review**. The Windows / Python 3.14 compile/import smoke, provenance separation, history-free snapshot build, focused Phase-2 regression, and historical external-solver exclusion checks have passed. Apache-2.0 is now packaged for the **sanitized public snapshot only**; the private research tree intentionally does not carry a root `LICENSE` because it still contains provenance-sensitive historical material outside the public release scope.
+This repository is the **history-trimmed public WeaveCube v1.0 research snapshot**. The Windows / Python 3.14 compile/import smoke, provenance separation, manifest/import/ignore gates, focused Phase-2 regression, license-bearing snapshot rebuild, and historical external-solver exclusion checks passed before publication.
 
-A focused review of the project-side Phase-2 modules and the statically resolved FULL-24 path found no direct/lightly reformatted source match in the tested comparison set and no ordinary Python dependency on the historical RubikTwoPhase bridge in the FULL-24 closure. Historical external-solver integration files remain on HOLD and are not automatically cleared for Apache-2.0 distribution.
+The public provenance root is `d3e4773430c3f93dfc26d49772fe064bdc6109ae`. The corresponding build receipt records private source anchor `580f7979545e2c3acfbf7f9e1bb06ae646e7d2cd`, 160 approved code files, and 186 builder-copied files before the generated receipt itself was committed.
 
-Do not treat this branch as the final tagged release yet. Do not merge to `main`, change repository visibility to public, or create `v1.0-research` until the remaining provenance gate and final diff review pass.
+A focused review of the project-side Phase-2 modules and the statically resolved FULL-24 path found no direct/lightly reformatted source match in the tested comparison set and no ordinary Python dependency on the historical RubikTwoPhase bridge in the supported public closure. Historical external-solver integration files remain excluded from this Apache-2.0 snapshot.
+
+The repository is public, but no immutable/tagged release is asserted by this status section until an explicit release tag is created.
 
 ## License
 
 **Public snapshot license: Apache License 2.0.**
 
-The sanitized public snapshot builder injects a root `LICENSE`, `NOTICE`, and `THIRD_PARTY_NOTICES.md`. This private research repository is not itself being blanket-licensed under Apache-2.0; provenance-sensitive historical code remains outside the public snapshot. Do not describe the private research tree as the Apache-2.0 distribution.
+This public snapshot includes a root `LICENSE`, `NOTICE`, and `THIRD_PARTY_NOTICES.md`. The Apache-2.0 grant applies to the project-authored material included in this sanitized snapshot; provenance-sensitive historical private research material is outside this distribution.
