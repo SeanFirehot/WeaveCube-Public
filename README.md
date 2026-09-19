@@ -2,6 +2,10 @@
 
 **Exact Solution Construction with the Lee Weave Method**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22834879.svg)](https://doi.org/10.5281/zenodo.22834879)
+
+**Archived research release:** [10.5281/zenodo.22834879](https://doi.org/10.5281/zenodo.22834879)
+
 WeaveCube is an experimental Rubik's Cube research project focused on exact solution construction over a shared move-word language.
 
 Its core method is the **Lee Weave Method (LWM)**: maintain multiple compatible shared move words, progressively intersect heterogeneous exact constraints over those same words, delay commitment/materialization, and accept a solution only after exact witness construction and native replay verification.
@@ -58,7 +62,7 @@ The public provenance root is `d3e4773430c3f93dfc26d49772fe064bdc6109ae`. The co
 
 A focused review of the project-side Phase-2 modules and the statically resolved FULL-24 path found no direct/lightly reformatted source match in the tested comparison set and no ordinary Python dependency on the historical RubikTwoPhase bridge in the supported public closure. Historical external-solver integration files remain excluded from this Apache-2.0 snapshot.
 
-The repository is public, but no immutable/tagged release is asserted by this status section until an explicit release tag is created.
+The repository is public and the explicit `v1.0-research` Git tag and GitHub Release have been published. The corresponding archival research snapshot is deposited on Zenodo under DOI [10.5281/zenodo.22834879](https://doi.org/10.5281/zenodo.22834879).
 
 ## License
 
