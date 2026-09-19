@@ -17,8 +17,16 @@ C:\python\CubeLab
 - A18 source SHA-256 used in v37.530: `ba36819f53de97056c348de958f85285e79927e84bac6ad5533fd2f30fbe4875`
 - Reviewed public source snapshot ZIP SHA-256: `9e0e202912a673a86bed2e3f230c02843a261a194a2e61fef08abf5fd78082d5`
 - September source-sync commit: `28cd1418f0068f3b2be9575bad23aa8fc3571d3a`
-- Technical report SHA-256: `32d62eaf9b62ff1042f4848b68bbbbd0496a51e06bc2d0a9d0297e7632279ce3`
-- Core deck SHA-256: `91aee4641dcd20d795079b0a4807674f5b2c14cf5fd33e2a2dabdf7e6b1d4eea`
+- Technical report SHA-256: `f1e4acd09ac7399b5c532da5fd010ce10305870faf2bf5ff4307bcee3b263358`
+- Core deck SHA-256: `3a0990c18177929d8536b3fb4c96752bf44495137a24964ba83f0424f9344bde`
+
+## Release identity
+
+- Annotated release tag: `v1.0-research`
+- Tagged code snapshot commit: `d72d46c360518b460dd9a608ece771afa160e89d`
+- Later DOI/citation metadata head: `99f1a9a6f33a9524a7c9988bbf51921286f3076f`
+
+The tag identifies the released code snapshot. The later `main` commit changes DOI/citation metadata only and should not be confused with a new solver release.
 
 ## Target environment
 
@@ -62,7 +70,7 @@ Accordingly, the published FULL-24 result is an experimental receipt. A fresh cl
 
 ## Public checkout gate
 
-Before tagging a public release, run from a fresh checkout on Windows / Python 3.14:
+For fresh-checkout verification of the released snapshot, run on Windows / Python 3.14:
 
 ```powershell
 $env:PYTHONPATH = "$PWD\src"
@@ -70,6 +78,6 @@ python -m compileall -q src scripts tests
 python scripts\repro\public_release_import_smoke.py
 ```
 
-The preliminary review-environment smoke passed the selected publication-critical import surface and exact packed-effect roundtrip, but it does not replace this final target-platform gate.
+The final scoped public snapshot passed the Windows / Python 3.14.6 compile/import smoke and exact packed-effect roundtrip before release. The public release audit records the completed target-platform gate.
 
 See `publication/PUBLIC_RELEASE_AUDIT.md` for the current audit record.
