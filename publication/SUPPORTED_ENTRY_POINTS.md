@@ -1,7 +1,7 @@
 # WeaveCube v1.0 supported entry points
 
 Date: 2026-09-17
-Status: **PROVISIONAL — provenance review still open**
+Status: **RELEASED — v1.0-research**
 
 ## Purpose
 
@@ -70,6 +70,8 @@ A historical script or module may be promoted to a supported v1.x entry point on
 4. a fresh-checkout test is added;
 5. the release audit is updated.
 
-## Final release gate
+## Post-release verification
 
-Before public release, repeat the supported-entry-point dependency/runtime audit on the final scoped tree and run the Windows / Python 3.14 fresh-checkout smoke. A supported path must not silently fall back to an excluded historical external-solver bridge.
+The final scoped public snapshot completed the Windows / Python 3.14 fresh-checkout compile/import smoke, focused Phase-2 regression, dependency/runtime review, publication merge, public visibility change, and `v1.0-research` tagging before release.
+
+For future v1.x releases or independent fresh-checkout verification, repeat the supported-entry-point dependency/runtime audit and Windows / Python 3.14 smoke. A supported path must not silently fall back to an excluded historical external-solver bridge.
