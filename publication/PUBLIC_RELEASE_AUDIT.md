@@ -25,12 +25,12 @@ Private source anchor recorded by the build receipt:
 
 - `580f7979545e2c3acfbf7f9e1bb06ae646e7d2cd`
 
-This audit is an engineering provenance record, not a legal opinion. No release tag is implied by this status; tagging remains a separate explicit release action.
+This audit is an engineering provenance record, not a legal opinion. **Post-release note:** the review gates described below were completed and the annotated `v1.0-research` tag was subsequently created. Historical sections retain their original review chronology where useful.
 
 ## Source synchronization
 
 - Historical authoritative development root: `C:\python\CubeLab`
-- Public repository: `SeanFirehot/WeaveCube`
+- Public repository: `SeanFirehot/WeaveCube-Public`
 - Pre-history-scrub September source-sync commit: `28cd1418f0068f3b2be9575bad23aa8fc3571d3a`
 - Rewritten September source-sync commit: `cb50d3ed98639aabe61bfa93b51cbf7d04d8f082`
 - Source-sync commit message: `Sync September 2026 WeaveCube source snapshot (historical CubeLab tree)`
@@ -113,9 +113,9 @@ Interpretation:
 - numeric and identifier matches require contextual review because cube software naturally shares piece numbering, move indices, subgroup terminology, and permutation-related constants;
 - high-risk production and historical integration modules still require manual expression-level review.
 
-Current provenance result: **MANUAL REVIEW REQUIRED**.
+Result at this stage of the historical audit: **MANUAL REVIEW REQUIRED**. Later sections record the focused manual review, sanitized snapshot decision, and release closure.
 
-### Required provenance closure
+### Required provenance closure (historical gate definition; subsequently completed)
 
 Before adding the Apache-2.0 license file, the release review must establish:
 
@@ -136,7 +136,7 @@ The GitHub blob identities match the generated final artifacts exactly.
 
 The blob identities and SHA-256 digests remain valid across the metadata-only history rewrite because the file contents did not change.
 
-**Publication-content note:** the technical report and presentation predate the provenance clarification above. Before final release they must be reviewed for any wording that could imply independent invention of two-phase structure or a clean-room implementation.
+**Publication-content note:** the technical report and presentation originally predated the provenance clarification above. Their wording was subsequently revised, rendered, visually checked, and installed at the canonical repository paths before release; see `publication/PUBLICATION_ARTIFACT_WORDING_REVIEW.md`.
 
 ## Compile and import checks
 
@@ -209,23 +209,27 @@ Public materials must retain these boundaries:
 - The final v37.517 C4 economics claim is not asserted unless its end-to-end receipt is added explicitly.
 - The implementation is not described as clean-room.
 
-## Remaining release gates
+## Post-release gate status
+
+All publication gates for the `v1.0-research` snapshot are complete:
 
 - [x] Rewrite reachable commit metadata to the GitHub noreply identity; preserve a local pre-rewrite bundle.
-- [x] Delete `publication-v1-lineendings`.
+- [x] Delete the temporary line-ending branch.
 - [x] Record rewritten source-sync and rewrite-completion branch-head SHAs.
-- [x] Run the exact public checkout smoke on Windows / Python 3.14 after rewrite.
-- [x] Select intended software license: Apache License 2.0.
-- [x] Add an explicit provenance/lineage record and remove repository-wide clean-room language.
-- [x] Complete focused expression-level review of current Phase-2 publication paths; historical integration remains excluded/held.
-- [x] Define the Apache-2.0 release architecture as a sanitized, history-trimmed snapshot; keep uncleared historical integration code and the private research history outside the public snapshot.
-- [x] Review technical report and presentation wording against the clarified two-phase lineage; revised binaries generated and visually verified, pending repository binary replacement.
-- [x] Replace report/deck binaries with the verified provenance-revised artifacts and freeze their new hashes.\n- [ ] Build the exact 160-file code snapshot from `publication/PUBLIC_SNAPSHOT_CODE_MANIFEST.txt` using `scripts/release/build_public_snapshot.py`.\n- [ ] Add `LICENSE` (and `NOTICE`/third-party notices if required) only after the sanitized snapshot passes final provenance/runtime checks.
-- [ ] Review final branch diff and metadata.
-- [ ] Merge to `main` only after explicit approval.
-- [ ] Change repository visibility to public only after explicit approval.
-- [ ] Tag/release `v1.0-research` after merge/publication review.
+- [x] Run the exact public checkout smoke on Windows / Python 3.14.
+- [x] Select and package Apache License 2.0 for the sanitized public snapshot.
+- [x] Add provenance/lineage records and remove repository-wide clean-room language.
+- [x] Complete focused expression-level review of current Phase-2 publication paths; keep historical integration outside the release.
+- [x] Build the exact 160-file history-free code snapshot and close project-local import dependencies.
+- [x] Run manifest/import/ignore gates and the focused Phase-2 regression.
+- [x] Review and install the provenance-revised technical report and presentation artifacts.
+- [x] Review the final branch diff and metadata.
+- [x] Merge the approved public snapshot to `main`.
+- [x] Change repository visibility to public.
+- [x] Create the annotated `v1.0-research` tag and GitHub Release.
+- [x] Archive the software release on Zenodo and add DOI/citation metadata.
 
+The tagged code snapshot is commit `d72d46c360518b460dd9a608ece771afa160e89d`. The later `main` commit `99f1a9a6f33a9524a7c9988bbf51921286f3076f` adds DOI/citation metadata and does not define a new solver release.
 
 ## Sanitized public snapshot decision
 
