@@ -35,6 +35,14 @@ The central contribution candidate is architectural: **Lee Weave Method = shared
 
 The release review does **not** describe the implementation as clean-room. Source-code provenance, historical GPL-facing integration code, and the Apache-2.0 release boundary are documented explicitly in the public provenance records.
 
+## Worked examples
+
+- [Decision trace](docs/examples/DECISION_TRACE.md): A18 Case 0, illustrating progressive exact restriction and adaptive-vs-fixed ordering.
+- [Solution walkthrough](docs/examples/SOLUTION_WALKTHROUGH.md): a concrete operational solution from FULL-24 Case 1.
+- [One-page summary (PDF)](docs/examples/WeaveCube_Worked_Examples_1page.pdf): both examples at a glance.
+
+A18 and FULL-24 are different experimental configurations, not stages of one end-to-end execution. Adaptive ordering is not always superior. FULL-24 does not establish arbitrary-state reliability, optimality, computational scalability, or competitiveness with Kociemba/Nissy.
+
 ## Publication files
 
 - [`docs/WeaveCube_Technical_Report_v1.pdf`](docs/WeaveCube_Technical_Report_v1.pdf) - detailed technical report
@@ -74,3 +82,4 @@ The repository is public and the explicit `v1.0-research` Git tag and GitHub Rel
 **Public snapshot license: Apache License 2.0.**
 
 This public snapshot includes a root `LICENSE`, `NOTICE`, and `THIRD_PARTY_NOTICES.md`. The Apache-2.0 grant applies to the project-authored material included in this sanitized snapshot; provenance-sensitive historical private research material is outside this distribution.
+
