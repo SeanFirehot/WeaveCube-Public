@@ -2,9 +2,14 @@
 
 **Exact Solution Construction with the Lee Weave Method**
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22834879.svg)](https://doi.org/10.5281/zenodo.22834879)
+| Paper (preprint) | Software (v1.0 research release) |
+| --- | --- |
+| [![Paper DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22846520.svg)](https://doi.org/10.5281/zenodo.22846520) | [![Software DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22834879.svg)](https://doi.org/10.5281/zenodo.22834879) |
+| [10.5281/zenodo.22846520](https://doi.org/10.5281/zenodo.22846520) | [10.5281/zenodo.22834879](https://doi.org/10.5281/zenodo.22834879) |
 
-**Archived research release:** [10.5281/zenodo.22834879](https://doi.org/10.5281/zenodo.22834879)
+**Paper:** *WeaveCube: A Feasibility Study of Exact Shared-Word Construction for Rubik's Cube Solving* (Sihyun Lee, 2026; CC BY 4.0).
+
+**Research scope:** This project is a feasibility demonstration. General solver reliability, computational scalability, consistently short solutions, and competitiveness with Kociemba/Nissy have not been established. See [Open problems and future research](OPEN_PROBLEMS.md).
 
 WeaveCube is an experimental Rubik's Cube research project focused on exact solution construction over a shared move-word language.
 
